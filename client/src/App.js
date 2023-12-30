@@ -86,10 +86,10 @@ const App = () => {
           <div className="body">
             <DataAdder updateFlag={updateFlag} item={item} setItem={setItem} click={updateFlag ? updateItem : addItem} placeholderText={holderText} />
             <ol className="lists">
-              {
+              {addData && (
                 addData.map((item) => {
                   return <ShowData key={item._id} item={item} handleUpdate={handleUpdate} onSelect={deleteItem} />
-                })
+                }))
               }
             </ol>
           </div>
