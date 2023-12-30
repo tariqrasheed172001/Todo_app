@@ -6,7 +6,7 @@ import ShowData from './todoComponent/ShowData';
 import axios from 'axios';
 
 const App = () => {
-  const host = 'http://localhost:8000';
+  const host = process.env.REACT_APP_BACKEND_URL;
   const [item, setItem] = useState({ data: '' });
   const [addData, setAddData] = useState([]);
   const [holderText, setHolderText] = useState("Add Item");
